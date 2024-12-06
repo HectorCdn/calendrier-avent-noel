@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Chango";
+	font-size: 72px;
+}
+
+body {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendrier {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: #39511a;
+	padding: 12px;
+	gap: 12px 14px;
+}
+
+.case {
+	width: 200px;
+	height: 166px;
+	border-radius: 8px;
+	border: none;
+}
+
+.orange {
+	background-color: #ffc776;
+	color: #402909;
+}
+
+.bleu {
+	background-color: #baece7;
+	color: #214441;
+}
+
+.violet {
+	background-color: #e5d3e4;
+	color: #4d254a;
+}
+
+.rouge {
+	background-color: #f26046;
+	color: #ffffff;
+}
+
+.flocon {
+	background: center / cover url("snowflake-variant.svg");
+	height: 45px;
+	width: 45px;
+	display: none;
+}
+
+.case:hover {
+    transform:  scale(-1.5, 1.5);
+    transition: 0.5s;
+    background-color: #214441;
+    color: #BAECE7;
+}
+
+@media screen and (min-width: 420px) {
+	.calendrier {
+		margin: 42px 100px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.case {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 0px 30px;
+	}
+
+	.flocon {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+    .calendrier {
+        margin: 50px 160px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
