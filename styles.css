@@ -8,13 +8,6 @@
 	font-size: 72px;
 }
 
-body {
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .calendrier {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -24,11 +17,10 @@ body {
 }
 
 .case {
-	width: 200px;
-	height: 166px;
+	padding: 12px 8px;
 	border-radius: 8px;
 	border: none;
-    transition: transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
 }
 
 .orange {
@@ -59,21 +51,21 @@ body {
 }
 
 .case:hover {
-    transform:  scale(-1.3, 1.3);
-    background-color: #214441;
-    color: #BAECE7;
+	transform: scale(-1.3, 1.3);
+	background-color: #214441;
+	color: #baece7;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 750px) {
 	.calendrier {
-		margin: 42px 100px;
+		margin: 42px 24px;
 		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.case {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		gap: 0px 30px;
 	}
@@ -84,19 +76,8 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-    .calendrier {
-        margin: 50px 160px;
-        grid-template-columns: repeat(4, 1fr);
-    }
+	.calendrier {
+		margin: 50px 36px;
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
